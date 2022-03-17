@@ -50,8 +50,7 @@ export class AlertPage implements OnInit {
   async presentAlertPrompt() {
     const alert = await this.alertCtrl.create({
       backdropDismiss: false,
-      cssClass: 'my-custom-class',
-      header: 'Prompt!',
+      header: 'Formulario',
       inputs: [
         {
           name: 'name1',
@@ -82,8 +81,8 @@ export class AlertPage implements OnInit {
         {
           name: 'name4',
           type: 'date',
-          min: '2017-03-01',
-          max: '2018-01-12'
+          min: '2021-03-01',
+          max: '2022-01-12'
         },
         // input date without min nor max
         {
@@ -121,8 +120,8 @@ export class AlertPage implements OnInit {
           }
         }, {
           text: 'Ok',
-          handler: () => {
-            console.log('Confirm Ok');
+          handler: (data: any) => {
+            console.log(data);
           }
         }
       ]
