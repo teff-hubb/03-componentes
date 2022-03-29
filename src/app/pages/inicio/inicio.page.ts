@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
+
 interface Componente{
   icon: string;
   name: string;
   redirectTo: string;
 }
+
 @Component({
   selector: 'app-inicio',
   templateUrl: './inicio.page.html',
@@ -22,6 +24,7 @@ export class InicioPage implements OnInit {
       icon: 'alert-circle-outline',
       name: 'Alert',
       redirectTo: '/alert'
+
     },
     {
       icon: 'beaker-outline',
@@ -36,6 +39,7 @@ export class InicioPage implements OnInit {
   ];
 
   constructor() {}
+
 
   ngOnInit() {
   }
