@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 
-interface Componente {
+interface Componente{
   icon: string;
   name: string;
   redirectTo: string;
@@ -13,6 +13,7 @@ interface Componente {
   styleUrls: ['./inicio.page.scss'],
 })
 export class InicioPage implements OnInit {
+
   componentes: Componente[] = [
     {
       icon: 'american-football-outline',
@@ -23,9 +24,22 @@ export class InicioPage implements OnInit {
       icon: 'alert-circle-outline',
       name: 'Alert',
       redirectTo: '/alert'
+
+    },
+    {
+      icon: 'beaker-outline',
+      name: 'Avatar',
+      redirectTo: '/avatar'
+    },
+    {
+      icon: 'radio-button-off-outline',
+      name: 'Button',
+      redirectTo: '/button'
     }
   ];
-  constructor() { }
+
+  constructor() {}
+
 
   ngOnInit() {
   }

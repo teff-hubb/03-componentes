@@ -8,10 +8,15 @@
 
   <ion-list>
     <ion-item *ngFor="let c of componentes"
-              [routerLink]="c.redirectTo" detail="true">
-      <ion-icon [name]="c.icon" slot="start" color="primary"  name="logo-apple-appstore"></ion-icon>{{ c.name}}
+
+      [routerLink]="c.redirectTo">
+      <ion-icon [name]="c.icon" slot="start" color="primary"></ion-icon>
+      {{c.name}}
+      
     </ion-item>
-    </ion-list>
+  </ion-list>
+
+
   <!-- <ion-button routerLink="/alert">
     Alert
   </ion-button>
