@@ -1,0 +1,27 @@
+<app-header titulo="Infinite-scroll"
+  class="ion-no-border" translucent >
+    <ion-toolbar>
+  
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/" text="Atrás" color="primary"></ion-back-button>
+      </ion-buttons>
+  
+      <ion-title class="ion-text-capitalize" color="primary"> {{titulo}}</ion-title>
+  
+    </ion-toolbar>
+  
+</app-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item *ngFor="let item of data; let i = index">
+      <ion-label> item {{ i + 1 }}</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content loadingSpinner="crescent" loadingText="Loading more data...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>
