@@ -8,6 +8,8 @@
 *.tmp.*
 *.sublime-project
 *.sublime-workspace
+*.png
+package-lock.json
 .DS_Store
 Thumbs.db
 UserInterfaceState.xcuserstate
