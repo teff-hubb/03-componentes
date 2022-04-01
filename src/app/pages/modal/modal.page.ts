@@ -13,7 +13,7 @@ export class ModalPage implements OnInit {
 
   ngOnInit() {
   }
-
+  // Aqui lanzamos el modal
   async mostrarModal() {
     const modal = await this.modalCtrl.create({
       component: ModalInfoPage,
@@ -22,6 +22,11 @@ export class ModalPage implements OnInit {
         pais: 'Francia'
       }
     });
-     await modal.present();
+    // con el await se muestra
+    await modal.present();
+
+    // const { data } = await modal.onDidDismiss();
+    const { data } = await modal.onWillDismiss();
+    console.log( 'onWillDismiss' );
   }
 }
