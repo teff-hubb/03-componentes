@@ -8,7 +8,7 @@ import { Componente } from '../interfaces/interfaces';
 export class DataService {
 
   constructor(private http: HttpClient) { }
-  // Utilizamos servicios para crear 3 observables
+  // Utilizamos servicios para crear  observables
   getUsuarios() {
     return this.http.get('https://jsonplaceholder.typicode.com/users');
   }
@@ -20,6 +20,9 @@ export class DataService {
   getMenuOpts() {
     // Vamos a retornar un arreglo de componentes
     return this.http.get<Componente[]>('/assets/data/menu-opts.json');
+  }
+  getHeroes() {
+    return this.http.get('/assets/data/superheroes.json');
   }
 
 }
