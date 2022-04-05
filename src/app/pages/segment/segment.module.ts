@@ -4,9 +4,10 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { SearchPageRoutingModule } from './search-routing.module';
+import { SegmentPageRoutingModule } from './segment-routing.module';
 
-import { SearchPage } from './search.page';
+import { SegmentPage } from './segment.page';
+import { ComponentsModule } from '../../components/components.module';
 import { PipesModule } from '../../pipes/pipes.module';
 
 @NgModule({
@@ -14,9 +15,10 @@ import { PipesModule } from '../../pipes/pipes.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    SearchPageRoutingModule,
+    SegmentPageRoutingModule,
+    ComponentsModule,
     PipesModule
   ],
-  declarations: [SearchPage]
+  declarations: [SegmentPage]
 })
-export class SearchPageModule {}
+export class SegmentPageModule {}
